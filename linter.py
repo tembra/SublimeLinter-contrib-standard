@@ -17,8 +17,8 @@ import re
 class Standard(NodeLinter):
     """Provides an interface to standard."""
 
-    syntax = ('javascript', 'html', 'javascriptnext', 'javascript 6to5', 'javascript (babel)')
-    cmd = 'standard --stdin --verbose'
+    syntax = ('typescript', 'typescriptreact')
+    cmd = 'standard --stdin --verbose --parser typescript-eslint-parser --plugin typescript'
     version_args = '--version'
     version_re = r'(?P<version>\d+\.\d+\.\d+)'
     version_requirement = '>= 3.7.2'
