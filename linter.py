@@ -14,7 +14,7 @@ from SublimeLinter.lint import NodeLinter
 import re
 
 
-class Standard(NodeLinter):
+class StandardTypescript(NodeLinter):
     """Provides an interface to standard."""
 
     syntax = ('typescript', 'typescriptreact')
