@@ -18,7 +18,7 @@ class StandardTypescript(NodeLinter):
     """Provides an interface to standard."""
 
     syntax = ('typescript', 'typescriptreact')
-    cmd = 'standard --stdin --verbose --parser typescript-eslint-parser --plugin typescript'
+    cmd = 'standard --stdin --verbose --parser=typescript-eslint-parser --plugin=typescript'
     version_args = '--version'
     version_re = r'(?P<version>\d+\.\d+\.\d+)'
     version_requirement = '>= 3.7.2'
@@ -46,4 +46,4 @@ class StandardTypescript(NodeLinter):
             match = self.html_pattern.match(code)
             if match:
                 code = match.group(1)
-        return super(Standard, self).run(cmd, code)
+        return super(StandardTypescript, self).run(cmd, code)
